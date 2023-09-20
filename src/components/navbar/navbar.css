@@ -1,0 +1,36 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+body {
+    color: white;
+}
+a {
+    color: white;
+}
+
+/* Your existing styles */
+
+.nav-link {
+    color: white;
+    font-weight: 300;
+    font-family: 'Inclusive Sans', sans-serif;
+}
+
+/* Add this style for the active state */
+.nav-link.active {
+    color: white;
+}
+
+
+.nav-link disabled {
+    color: white;
+}
+
+.nav-link:hover {
+    color: white;
+}

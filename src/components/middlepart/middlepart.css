@@ -1,0 +1,88 @@
+/* App.css */
+
+.App {
+    text-align: center;
+    background-color: #282c34;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .App-header {
+    margin-bottom: 20px;
+  }
+  
+ .Countdown-item {
+    background-color: none;
+ } 
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .Countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .Countdown-item {
+    margin: 0 10px;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    background-color: #007bff;
+    padding: 20px;
+    min-width: 60px;
+    min-height: 80px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Countdown-item span {
+    font-size: 3rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .Countdown-item p {
+    font-size: 1rem;
+  }
+  
+  /* Animation for Countdown Items */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  .Countdown-item {
+    animation: bounce 1s infinite;
+  }
+  
+  /* Additional Styling for Mobile */
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+    .Countdown-item {
+      font-size: 1.5rem;
+      min-width: 50px;
+      min-height: 60px;
+    }
+    .Countdown-item span {
+      font-size: 2rem;
+    }
+    .Countdown-item p {
+      font-size: 0.9rem;
+    }
+  }
+  
