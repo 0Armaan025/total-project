@@ -1,88 +1,111 @@
-/* App.css */
+/* middlepart.css */
 
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #282c34;
+  color: white;
+}
+
+/* App Container */
 .App {
-    text-align: center;
-    background-color: #282c34;
-    color: white;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
-  }
-  
-  .App-header {
-    margin-bottom: 20px;
-  }
-  
- .Countdown-item {
-    background-color: none;
- } 
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, #282c34, #007bff);
+}
 
+/* Header Styles */
+.App-header {
+  margin-bottom: 20px;
+}
+
+/* Typography */
+h1 {
+  font-size: 3rem; /* Increased font size for better readability */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Add text shadow for contrast */
+}
+
+/* Countdown Styles */
+.Countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Added gap for better spacing between countdown items */
+}
+
+.Countdown-item {
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  background-color: rgba(0, 123, 255, 0.8); /* Slightly transparent background */
+  padding: 10px;
+  margin: 20px;
+  min-width: 100px; /* Increased min-width for better mobile responsiveness */
+  min-height: 120px; /* Increased min-height for better visibility */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Improved box shadow */
+  transition: transform 0.3s ease; /* Added transition for hover effect */
+}
+
+.Countdown-item:hover {
+  transform: scale(1.05); /* Hover effect to slightly enlarge countdown items */
+}
+
+.Countdown-item span {
+  font-size: 3rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.Countdown-item p {
+  font-size: 1.5rem; /* Increased font size for better readability */
+  text-transform: uppercase; /* Uppercase text for consistency */
+  letter-spacing: 1px; /* Added letter-spacing for clarity */
+}
+
+/* Animation for Countdown Items */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Apply animation to Countdown Items */
+.Countdown-item {
+  animation: bounce 1s infinite;
+}
+
+span {
+  background: none;
+}
+
+p {
+  background: none;
+}
+
+/* Additional Styling for Mobile */
+@media (max-width: 600px) {
   h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 2rem; /* Adjusted font size for mobile */
   }
-  
-  .Countdown {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
   .Countdown-item {
-    margin: 0 10px;
-    font-size: 2rem;
-    text-align: center;
-    border-radius: 8px;
-    background-color: #007bff;
-    padding: 20px;
-    min-width: 60px;
-    min-height: 80px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+    min-width: 80px; /* Adjusted min-width for better mobile responsiveness */
+    min-height: 100px; /* Adjusted min-height for better visibility on mobile */
   }
-  
   .Countdown-item span {
-    font-size: 3rem;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 10px;
+    font-size: 2.5rem; /* Adjusted font size for mobile */
   }
-  
   .Countdown-item p {
-    font-size: 1rem;
+    font-size: 1rem; /* Adjusted font size for mobile */
   }
-  
-  /* Animation for Countdown Items */
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
-  }
-  
-  .Countdown-item {
-    animation: bounce 1s infinite;
-  }
-  
-  /* Additional Styling for Mobile */
-  @media (max-width: 600px) {
-    h1 {
-      font-size: 1.5rem;
-    }
-    .Countdown-item {
-      font-size: 1.5rem;
-      min-width: 50px;
-      min-height: 60px;
-    }
-    .Countdown-item span {
-      font-size: 2rem;
-    }
-    .Countdown-item p {
-      font-size: 0.9rem;
-    }
-  }
-  
+}

@@ -37,7 +37,8 @@ function MiddlePart() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Happy Birthday Total!</h1>
+        <br/>
+        <h1>Happy Birthday Total in 🥳</h1>
         <div className="Countdown">
           <div className="Countdown-item">
             <span>{timeLeft.days}</span>
